@@ -697,7 +697,7 @@ jQuery(document).ready(function($){
                     listEffects : null,
                     easing : 'smooth',
                     layoutMode: 'grid',
-                    targetDisplayGrid : 'inline-block',
+                    targetDisplayGrid : 'inline-flex',
                     targetDisplayList: 'block',
                     listClass : '',
                     gridClass : '',
@@ -878,7 +878,10 @@ jQuery(document).ready(function($){
                         } else {
                             $showOnLoad.removeStyle(config.prefix+'transition, transition').css({
                                 display: config.targetDisplayGrid,
-                                opacity: 1
+                                opacity: 1,
+                                float: 'none',
+                                flexDirection: 'row',
+                                alignItems: 'center'
                             });
                         };
                         

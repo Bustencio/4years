@@ -306,7 +306,12 @@ bootstrap.min.css: 5 .navbar-toggle {
 }
 
 .projects-holder {
+  width: 100%;
   padding: 30px 15px 0px 15px;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: flex-start;
+  text-align: center;
 }
 
 .filter-categories {
@@ -334,7 +339,8 @@ bootstrap.min.css: 5 .navbar-toggle {
 }
 
 #portfolio .inner-container {
-  width: 75%;
+  width: 100%;
+  min-height: 100vh;
 }
 
 #portoflio .page-section {
@@ -343,15 +349,17 @@ bootstrap.min.css: 5 .navbar-toggle {
 
 #portfolio .section-heading {
   padding-top: 200px;
-  padding-bottom: 200px;
+  padding-bottom: 150vh;
   padding-right: 25px;
   background-color: #9047fee8;
-  height: 100%;
+  min-height: 100vh;
   margin-left: -100vh;
-  padding-left: 100vh;
+  padding-left: 101vh;
 }
 
 #portfolio .project-item {
+  margin-left: auto;
+  margin-right: auto;
   margin: 0px -16px;
 }
 
@@ -377,35 +385,53 @@ bootstrap.min.css: 5 .navbar-toggle {
   text-align: center;
 }
 
-#testimonial {
-  background-color: #f7c552;
+.image {
+  transition: all 0.2s ease-in-out;
+  margin: 5px 5px;
+}
+
+.image:hover {
+  transform: scale(1.02);
+}
+
+.image:hover > .content {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0.2s, opacity 0.2s ease-in-out;
+}
+
+.image .content {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.6); /* Black background with 0.5 opacity */
+  width: 100%;
+}
+
+.image p {
   text-align: center;
-  padding: 100px 0px;
+  color: #ffffff;
+  margin: 0px;
 }
 
-#testimonial .testimonials-item h4 {
-  color: #fff;
-  font-size: 17px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  margin-top: 30px;
-  margin-bottom: 5px;
+#footer {
+  width: 100%;
 }
 
-#testimonial .testimonials-item span {
-  font-size: 13px;
-  color: #fff;
-  letter-spacing: 0.5px;
+#footer .container {
+  text-align: center;
+  padding: 20px 0px;
+  background-color: #232323;
+  margin: 0px;
+  width: 100%;
 }
 
-#testimonial .testimonials-item p {
-  font-size: 16px;
-  color: #9a9a9a;
-  font-style: italic;
-  font-weight: 300;
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 5px;
+#footer #footer-text {
+  color: white;
+  font-size: 20px;
+  margin: 0;
 }
 
 .owl-pagination {
@@ -425,45 +451,6 @@ bootstrap.min.css: 5 .navbar-toggle {
   -moz-border-radius: 20px;
   border-radius: 20px;
   background: #fff;
-}
-
-#blog {
-  background-image: url(../img/blog-bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-#blog .section-heading {
-  text-align: left;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 582px;
-  margin-left: -100vh;
-  padding-left: 100vh;
-  overflow: hidden !important;
-}
-
-#blog .section-heading h4 {
-  margin-top: 0px;
-  font-size: 20px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #fff;
-  letter-spacing: 1px;
-}
-
-#blog .section-heading .line-dec {
-  width: 270px;
-  height: 1px;
-  background-color: rgba(250, 250, 250, 0.5);
-  margin: 20px 0 15px 0;
-}
-
-#blog .section-heading p {
-  color: #fff;
-  padding-right: 70px;
 }
 
 .wrapper {
@@ -820,6 +807,13 @@ footer .connect-us ul li a:hover {
 
   #portfolio .section-heading p {
     padding: 0px 20px;
+  }
+
+  .image .content {
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+    bottom: 24px;
   }
 
   .projects-holder {
