@@ -218,8 +218,9 @@ bootstrap.min.css: 5 .navbar-toggle {
 }
 
 .baner-content .container {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(15, 15, 15, 0.5);
   width: 75%;
+  border-radius: 5px;
 }
 
 .baner-content .text-content {
@@ -256,10 +257,9 @@ bootstrap.min.css: 5 .navbar-toggle {
 
 #about {
   padding: 175px 0px;
-  background-color: rgb(61, 61, 61);
+  background-image: url(../img/fondoRegalos.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
 }
 
 #about .container {
@@ -268,6 +268,9 @@ bootstrap.min.css: 5 .navbar-toggle {
 
 #about .service-item {
   text-align: center;
+  background-color: #1414149d;
+  padding: 25px 10px;
+  border-radius: 15px;
 }
 
 #about .service-item .icon {
@@ -278,7 +281,7 @@ bootstrap.min.css: 5 .navbar-toggle {
   text-align: center;
   border-radius: 15%;
   line-height: 100px;
-  background-color: #888888;
+  background-color: #a0a0a0c4;
 }
 
 #about .service-item h4 {
@@ -340,7 +343,7 @@ bootstrap.min.css: 5 .navbar-toggle {
 
 #portfolio .inner-container {
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
 }
 
 #portoflio .page-section {
@@ -348,11 +351,16 @@ bootstrap.min.css: 5 .navbar-toggle {
 }
 
 #portfolio .section-heading {
-  padding-top: 200px;
-  padding-bottom: 150vh;
+  padding-top: 100px;
+  padding-bottom: 40vh;
   padding-right: 25px;
-  background-color: #9047fee8;
-  min-height: 100vh;
+  background: linear-gradient(
+    180deg,
+    rgba(144, 71, 254, 1) 0%,
+    rgba(144, 71, 254, 1) 45%,
+    rgba(191, 148, 254, 1) 71%,
+    rgba(242, 242, 242, 1) 100%
+  );
   margin-left: -100vh;
   padding-left: 101vh;
 }
@@ -773,11 +781,18 @@ footer .connect-us ul li a:hover {
 
 @media (max-width: 991px) {
   .baner-content .container {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(15, 15, 15, 0.5);
     width: 100%;
   }
   .baner-content .text-content p {
     padding: 0px 15%;
+  }
+
+  #about {
+    background-image: url(../img/fondoRegalosMovil.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
   }
 
   #about .service-item {
@@ -791,8 +806,8 @@ footer .connect-us ul li a:hover {
   #portfolio .section-heading {
     text-align: center;
     padding-top: 100px;
-    padding-bottom: 100px;
-    background-color: #9047fee8;
+    padding-bottom: 0px;
+    background: #9047fee8;
     height: 505px;
     margin-left: -15px;
     padding-left: 0vh;
