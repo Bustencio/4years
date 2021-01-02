@@ -281,7 +281,11 @@ bootstrap.min.css: 5 .navbar-toggle {
   text-align: center;
   border-radius: 15%;
   line-height: 100px;
-  background-color: #a0a0a0c4;
+  background-color: none;
+}
+
+#about .service-item .icon img {
+  border-radius: 15%;
 }
 
 #about .service-item h4 {
